@@ -1,4 +1,7 @@
 package iso;
 
-public class FieldType {
+public enum FieldType {
+    FIXED,
+    LLVAR,
+    LLLVAR
 }
