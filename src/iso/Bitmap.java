@@ -1,6 +1,7 @@
 package iso;
 
 import util.Cursor;
+import util.HexUtil;
 
 public final class Bitmap {
     private final boolean[] bits= new boolean[129];
