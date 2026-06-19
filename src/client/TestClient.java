@@ -29,7 +29,7 @@ public final class TestClient {
         int port=args.length>1?Integer.parseInt(args[1]):8583;
         try(Socket socket=new Socket(host,port)){
             socket.setTcpNoDelay(true);
-            TestClient testClient=new TestClient(socket);
+            TestClient client=new TestClient(socket);
 
             System.out.println("== Sale $250.00 on card ending 1111 (funded) ==");
             client.exchange(client.sale("4111111111111111", "000025000", "000001"));
@@ -89,7 +89,7 @@ public final class TestClient {
         return String.format("%12s", digits).replace(' ','0');
     }
     private static String rrn(String stan) {
-        String base= "RNN"+stan;
+        String base= "RRN"+stan;
         return String.format("%-12s",base).replace(' ','0');
     }
 
